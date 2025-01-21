@@ -54,5 +54,3 @@ def fetch_contests():
             contest_info['mode'] = 'offline'
         contests.append(contest_info)
     return contests
-
-print(fetch_contests())

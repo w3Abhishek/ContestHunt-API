@@ -28,5 +28,3 @@ def fetch_contests():
         contest_info['platform'] = 'codeforces'
         contests.append(contest_info)
     return contests
-
-print(fetch_contests())
