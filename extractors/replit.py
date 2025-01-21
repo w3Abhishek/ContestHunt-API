@@ -16,7 +16,7 @@ REPLIT_API_HEADERS = {
     'x-requested-with': 'XMLHttpRequest',
 }
 
-def fetch_bounties():
+def fetch_contests():
     bounties = []
     tick = 0
     while True:
