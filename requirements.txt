@@ -1,5 +1,5 @@
 requests
 beautifulsoup4
+supabase
 flask
 flask-cors
-supabase
