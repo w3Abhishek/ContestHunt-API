@@ -50,14 +50,24 @@ print(response.json())
 
 ### Response Format:
 ```json
-{
-  "name": "Sample Contest",
-  "url": "https://sample-contest.platform.com",
-  "start_time": 1739100600,
-  "end_time": 1739115000,
-  "duration": 14400,
-  "description": "A sample coding contest."
-}
+[
+   {
+   "name": "Sample Contest",
+   "url": "https://sample-contest.platform.com",
+   "start_time": 1739100600,
+   "end_time": 1739115000,
+   "duration": 14400,
+   "description": "A sample coding contest."
+   },
+   {
+   "name": "Sample Contest",
+   "url": "https://sample-contest.platform.com",
+   "start_time": 1739100600,
+   "end_time": 1739115000,
+   "duration": 14400,
+   "description": "A sample coding contest."
+   }
+]
 ```
 
 ---
