@@ -27,5 +27,6 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.fromisoformat(contest['contest_end_date_iso']).timestamp())
         contest_info['duration'] = int(contest_info['end_time'] - contest_info['start_time'])
         contest_info['description'] = ''
+        contest_info['platform'] = 'codechef'
         contests.append(contest_info)
     return contests

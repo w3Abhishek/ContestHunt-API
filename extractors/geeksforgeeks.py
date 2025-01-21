@@ -26,5 +26,6 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.strptime(contest['end_time'], "%Y-%m-%dT%H:%M:%S").timestamp())
         contest_info['duration'] = int(contest_info['end_time'] - contest_info['start_time'])
         contest_info['description'] = ''
+        contest_info['platform'] = 'geeksforgeeks'
         contests.append(contest_info)
     return contests

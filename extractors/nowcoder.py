@@ -26,6 +26,7 @@ def fetch_contests():
         contest_info['end_time'] = contests_json_data['contestEndTime']
         contest_info['url'] = f'https://ac.nowcoder.com/acm/contest/{contests_json_data["contestId"]}'
         contest_info['description'] = ''
+        contest_info['platform'] = 'nowcoder'
     return contests
 
 print(fetch_contests())

@@ -25,6 +25,7 @@ def fetch_contests():
         contest_info['end_time'] = contest['startTimeSeconds'] + contest['durationSeconds']
         contest_info['duration'] = contest['durationSeconds']
         contest_info['description'] = ''
+        contest_info['platform'] = 'codeforces'
         contests.append(contest_info)
     return contests
 

@@ -40,5 +40,6 @@ def fetch_contests():
         contest_info['end_time'] = contest['startTime'] + contest['duration']
         contest_info['duration'] = contest['duration']
         contest_info['description'] = contest['description']
+        contest_info['platform'] = 'leetcode'
         contests.append(contest_info)
     return contests

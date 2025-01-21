@@ -23,5 +23,6 @@ def fetch_contests():
         contest_info['duration'] = contest_meta[2].text
         contest_info['url'] = f'https://atcoder.jp{contest_meta[1].find("a")["href"]}'
         contest_info['description'] = ''
+        contest_info['platform'] = 'atcoder'
         contests.append(contest_info)
     return contests

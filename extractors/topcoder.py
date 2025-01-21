@@ -22,5 +22,6 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.fromisoformat(contest['endDate'].replace('Z', '+00:00')).timestamp())
         contest_info['duration'] = contest_info['end_time'] - contest_info['start_time']
         contest_info['description'] = contest['description']
+        contest_info['platform'] = 'topcoder'
         contests.append(contest_info)
     return contests

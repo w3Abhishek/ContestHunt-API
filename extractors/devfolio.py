@@ -29,6 +29,11 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.fromisoformat(contest['ends_at']).timestamp())
         contest_info['duration'] = int(contest_info['end_time'] - contest_info['start_time'])
         contest_info['description'] = contest['desc']
+        contest_info['platform'] = 'devfolio'
+        if contest['is_online']:
+            contest_info['mode'] = 'online'
+        else:
+            contest_info['mode'] = 'offline'
         contests.append(contest_info)
     # Fetching upcoming hackathons
     json_data['type'] = 'upcoming'
@@ -42,6 +47,11 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.fromisoformat(contest['ends_at']).timestamp())
         contest_info['duration'] = int(contest_info['end_time'] - contest_info['start_time'])
         contest_info['description'] = contest['desc']
+        contest_info['platform'] = 'devfolio'
+        if contest['is_online']:
+            contest_info['mode'] = 'online'
+        else:
+            contest_info['mode'] = 'offline'
         contests.append(contest_info)
     return contests
 

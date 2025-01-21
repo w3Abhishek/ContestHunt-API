@@ -21,5 +21,6 @@ def fetch_contests():
         contest_info['end_time'] = int(datetime.fromisoformat(contest['end_utc_tz']).timestamp())
         contest_info['duration'] = int(contest_info['end_time'] - contest_info['start_time'])
         contest_info['description'] = contest['description']
+        contest_info['platform'] = 'hackerearth'
         contests.append(contest_info)
     return contests

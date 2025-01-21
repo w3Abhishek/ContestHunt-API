@@ -26,5 +26,6 @@ def fetch_contests():
         contest_info['end_time'] = int(contest['endTime'])
         contest_info['duration'] = contest_info['end_time'] - contest_info['start_time']
         contest_info['description'] = ''
+        contest_info['platform'] = 'csacademy'
         contests.append(contest_info)
     return contests

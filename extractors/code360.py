@@ -19,5 +19,6 @@ def fetch_contests():
         contest_info['duration'] = contest['event_start_time'] - contest['event_end_time']
         contest_info['url'] = f'https://www.naukri.com/code360/contests/{contest["slug"]}'
         contest_info['description'] = contest['short_desc']
+        contest_info['platform'] = 'code360'
         contests.append(contest)
     return contests
