@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from dbmanager import fetch_items
 import os
@@ -11,17 +11,11 @@ CORS(app)
 def home():
     return render_template("index.html")
 
-@app.route("/contests")
-def get_contests():
-    return jsonify({"data": fetch_items("contests")})
-
-@app.route("/hackathons")
-def get_hackathons():
-    return jsonify({"data": fetch_items("hackathons")})
-
-@app.route("/bounties")
-def get_bounties():
-    return jsonify({"data": fetch_items("bounties")})
+@app.route("/<type>")
+def get_items(type):
+    platform = request.args.get("platform")
+    items = fetch_items(type, platform)
+    return jsonify(items)
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
